@@ -1,0 +1,14 @@
+/home/khulysojohn/development/training/CalculateFinalGPA/bin/Debug/net7.0/CalculateFinalGPA
+/home/khulysojohn/development/training/CalculateFinalGPA/bin/Debug/net7.0/CalculateFinalGPA.deps.json
+/home/khulysojohn/development/training/CalculateFinalGPA/bin/Debug/net7.0/CalculateFinalGPA.runtimeconfig.json
+/home/khulysojohn/development/training/CalculateFinalGPA/bin/Debug/net7.0/CalculateFinalGPA.dll
+/home/khulysojohn/development/training/CalculateFinalGPA/bin/Debug/net7.0/CalculateFinalGPA.pdb
+/home/khulysojohn/development/training/CalculateFinalGPA/obj/Debug/net7.0/CalculateFinalGPA.GeneratedMSBuildEditorConfig.editorconfig
+/home/khulysojohn/development/training/CalculateFinalGPA/obj/Debug/net7.0/CalculateFinalGPA.AssemblyInfoInputs.cache
+/home/khulysojohn/development/training/CalculateFinalGPA/obj/Debug/net7.0/CalculateFinalGPA.AssemblyInfo.cs
+/home/khulysojohn/development/training/CalculateFinalGPA/obj/Debug/net7.0/CalculateFinalGPA.csproj.CoreCompileInputs.cache
+/home/khulysojohn/development/training/CalculateFinalGPA/obj/Debug/net7.0/CalculateFinalGPA.dll
+/home/khulysojohn/development/training/CalculateFinalGPA/obj/Debug/net7.0/refint/CalculateFinalGPA.dll
+/home/khulysojohn/development/training/CalculateFinalGPA/obj/Debug/net7.0/CalculateFinalGPA.pdb
+/home/khulysojohn/development/training/CalculateFinalGPA/obj/Debug/net7.0/CalculateFinalGPA.genruntimeconfig.cache
+/home/khulysojohn/development/training/CalculateFinalGPA/obj/Debug/net7.0/ref/CalculateFinalGPA.dll
