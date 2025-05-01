@@ -1,23 +1,21 @@
 ﻿using System;
 
-namespace CalculateFinalGPA
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            Console.Write("Enter Student name here: ");
+namespace CalculateFinalGPA {
+    class Program {
+        static void Main(string[] args) {
+            //collecting student name
+            Console.Write("Enter Student Name here: ");
             string studentName = Console.ReadLine();
 
-            // Collect subject names and marks
-            Console.Write("Enter first subject here: ");
+            //collect subject names and marks
+            Console.Write("Enter Home Language here: ");
             string subject1 = Console.ReadLine();
-            Console.Write("Enter first subject marks here: ");
+            Console.Write("Enter Home Language marks here: ");
             int subject1marks = Convert.ToInt32(Console.ReadLine());
 
-            Console.Write("Enter second subject here: ");
+            Console.Write("Enter First Additional Language here: ");
             string subject2 = Console.ReadLine();
-            Console.Write("Enter second subject marks here: ");
+            Console.Write("Enter First Additional Language marks here: ");
             int subject2Marks = Convert.ToInt32(Console.ReadLine());
 
             Console.Write("Enter third subject here: ");
@@ -45,61 +43,106 @@ namespace CalculateFinalGPA
             Console.Write("Enter seventh subject marks here: ");
             int subject7Marks = Convert.ToInt32(Console.ReadLine());
 
-            // Process arrays
+            //processing arrays
             string[] subjects = { subject1, subject2, subject3, subject4, subject5, subject6, subject7 };
             int[] marks = { subject1marks, subject2Marks, subject3Marks, subject4Marks, subject5Marks, subject6Marks, subject7Marks };
-            string[] subjectCredits = new string[7];
+            string[] subjectSymbol = new string[7];
             int[] subjectPoints = new int[7];
 
             // Assign credit and point based on mark ranges
-            for (int i = 0; i < marks.Length; i++)
-            {
+            for (int i = 0; i < marks.Length; i++) {
+                
                 if (marks[i] < 30)
                 {
-                    subjectCredits[i] = "G";
+                    subjectSymbol[i] = "G";
                     subjectPoints[i] = 1;
                 }
                 else if (marks[i] < 40)
                 {
-                    subjectCredits[i] = "F";
+                    subjectSymbol[i] = "F";
                     subjectPoints[i] = 2;
                 }
                 else if (marks[i] < 50)
                 {
-                    subjectCredits[i] = "E";
+                    subjectSymbol[i] = "E";
                     subjectPoints[i] = 3;
                 }
                 else if (marks[i] < 60)
                 {
-                    subjectCredits[i] = "D";
+                    subjectSymbol[i] = "D";
                     subjectPoints[i] = 4;
                 }
                 else if (marks[i] < 70)
                 {
-                    subjectCredits[i] = "C";
+                    subjectSymbol[i] = "C";
                     subjectPoints[i] = 5;
                 }
                 else if (marks[i] < 80)
                 {
-                    subjectCredits[i] = "B";
+                    subjectSymbol[i] = "B";
                     subjectPoints[i] = 6;
                 }
                 else
                 {
-                    subjectCredits[i] = "A";
+                    subjectSymbol[i] = "A";
                     subjectPoints[i] = 7;
                 }
             }
 
-            // Display results
+            int pointSum = 0;
+            for (int i = 0; i < subjectPoints.Length; i++) {
+                pointSum += subjectPoints[i];
+            }
+
+            int sumSubjectMarks = 0;
+            for (int i = 0; i < marks.Length; i++) {
+                sumSubjectMarks += marks[i];
+            }
+
+            //determine student progression status
+            bool isProgressing = true;
+            int above40Count = 0;
+            int above30Count = 0;
+
+
+            //Count subjects above 40 and 30
+            for (int i = 0; i < marks.Length; i++) {
+                if (marks[i] > 40) above40Count++;
+                if (marks[i] > 30) above30Count++;
+            }
+
+            //condition to progress
+            if (above40Count >= 3 && above30Count >= 3 && subject1marks >= 40)
+            {
+                isProgressing = true;
+            }
+            else
+            {
+                isProgressing = false;
+            }
+
+            string status;
+                if (isProgressing) {
+                    status = "Progressing";
+                    }
+                    else {
+                        status = "Not Progressing";
+                    }
+
+
+            //display results
             Console.WriteLine($"\n--- Final Report for {studentName} ---");
-            Console.WriteLine("Subject\t\tMarks\tCredit\tPoint");
+            Console.WriteLine("Subject\t\t\tMarks\tCredit\tPoint");
             Console.WriteLine("--------------------------------------------");
 
-            for (int i = 0; i < subjects.Length; i++)
-            {
-                Console.WriteLine($"{subjects[i]}\t\t{marks[i]}\t{subjectCredits[i]}\t{subjectPoints[i]}");
+            for (int i = 0; i < subjects.Length; i++) {
+                Console.WriteLine($"{subjects[i],-24}{marks[i],-8}{subjectSymbol[i],-8}{subjectPoints[i]}");
             }
+
+            Console.WriteLine("--------------------------------------------");
+            Console.WriteLine($"Total Points:\t\t{pointSum}");
+            Console.WriteLine($"Total Marks:\t\t{sumSubjectMarks}");
+            Console.WriteLine($"Status:\t\t\t{status}");
         }
     }
 }
