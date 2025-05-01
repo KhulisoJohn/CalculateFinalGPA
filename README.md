@@ -48,7 +48,7 @@ Here is the Credit and Point scale:
 1. Make sure you have the .NET SDK installed.
 2. Clone this repository:
    ```bash
-   git clone https://github.com/your-username/CalculateFinalGPA.git
+   git clone https://github.com/KhulisoJohn/CalculateFinalGPA.git
    cd CalculateFinalGPA
    ```
 3. Run the app using the .NET CLI:
