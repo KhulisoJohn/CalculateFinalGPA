@@ -12,3 +12,4 @@
 /home/khulysojohn/development/training/CalculateFinalGPA/obj/Debug/net7.0/CalculateFinalGPA.pdb
 /home/khulysojohn/development/training/CalculateFinalGPA/obj/Debug/net7.0/CalculateFinalGPA.genruntimeconfig.cache
 /home/khulysojohn/development/training/CalculateFinalGPA/obj/Debug/net7.0/ref/CalculateFinalGPA.dll
+/home/khulysojohn/development/training/CalculateFinalGPA/obj/Debug/net7.0/CalculateFinalGPA.sourcelink.json
